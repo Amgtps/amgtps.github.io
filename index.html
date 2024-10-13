@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- given below is Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Gautam Shah - Portfolio</title>
 </head>
 <body>
     <div class="bg-image"></div>
     <div class="noise-overlay"></div>
     <div class="container">
+        <div class="cursor outer"></div>
+        <div class="cursor inner"></div>
         <header>
             <div class="logo">Gautam <br>Shah</div>
             <nav>
@@ -20,6 +24,7 @@
                 <a href="#contact">Contact</a>
                 <a href="#resume" class="cta-button">Resume</a>
             </nav>
+            <script src="script.js"></script>
         </header>
         <main>
             <section class="hero">
@@ -35,4 +40,14 @@
         </main>
         <div class="scroll-hint">Scroll to know more</div>
     </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typingEffect = new Typed(".multiText",{
+            strings : ["designer", "coder",],
+            loop: true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500
+        })
+    </script>
 </html>
