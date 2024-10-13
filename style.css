@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF0F0;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.card {
+    background-color: #FFE6E6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.hero {
+    grid-column: span 2;
+}
+.profile-img {
+    width: 100%;
+    border-radius: 10px;
+}
+.project-img {
+    width: 100%;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.projects {
+    grid-column: span 3;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.social-links a {
+    text-decoration: none;
+    color: #333;
+}
