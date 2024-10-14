@@ -27,7 +27,7 @@ body, html {
 
 section {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     scroll-snap-align: start;
     position: relative;
     overflow: hidden;
@@ -172,7 +172,7 @@ section {
         }
         .hero {
             position: relative;
-            padding: 100px 20px;
+            padding:  0px 20px;
             min-height: 100vh;
             top: 200px;
         }
@@ -185,7 +185,7 @@ section {
             position: relative;
             z-index: 2;
             left: 126px;
-            top: 322px;
+            top: 430px ;
         }
         .hero-circle {
             width: 280px;
@@ -195,7 +195,7 @@ section {
             position: absolute;
             z-index: 1;
             left: -10px;
-            top: 280px;
+            top: 390px;
         }
         .highlight {
             color: white;
@@ -214,11 +214,12 @@ section {
         }
         .scroll-hint {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
             font-size: 14px;
             display: flex;
             align-items: center;
+            z-index: 2;
+            right: 40px;
+            top: 640px;
         }
         
         .scroll-hint::after {
@@ -236,98 +237,4 @@ section {
             50% {
                 transform: translateY(10px); /* Move down by 10px */
             }
-        }
-
-
-        .about-section {
-            padding: 60px 20px;
-            background-color: rgba(248, 241, 228, 0.9);
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-title {
-            font-size: 62px;
-            font-weight: 100;
-            font-family: 'Moon Dance', cursive;
-            margin-bottom: 20px;
-            color: #ffffff;
-            z-index: 2;
-            position: relative;
-            top: -73px;
-            left: 4px;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            font-size: medium;
-            z-index: 2;
-        }
-
-        .about-text {
-            font-size: 18px;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-
-        .about-stats {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 40px;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-title {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .stat-value {
-            font-size: 28px;
-            color: #C34444;
-            font-family: 'Moon Dance', cursive;
-        }
-
-        .view-work-button {
-            background-color: #C34444;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            display: inline-block;
-        }
-
-        .view-work-button:hover {
-            background-color: #A32D2D;
-            transform: scale(1.05);
-            cursor: pointer;
-        }
-
-        .highlight1 {
-            color: #C34444;
-        }
-
-        .about-circle {
-            width: 221px;
-            height: 221px;
-            background-color: #C34444;
-            border-radius: 50%;
-            position: absolute;
-            z-index: 1; 
-            left: 42%;
-            top: 11%;
-            transition: all 0.5s ease;
         }
