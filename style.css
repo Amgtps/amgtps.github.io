@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
 
         body, html {
             margin: 0;
@@ -13,12 +14,12 @@
         .container {
             max-width: 1440px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0px 20px 20px 20px;
             position: relative;
             z-index: 1;
             height: calc(100% - 40px);
         }
-        .cursor {
+        /* .cursor {
             position: absolute;
             height: 25px;
             width: 25px;
@@ -38,12 +39,35 @@
         .cursor.hover {
             transform: translate(-50%, -50%) scale(4);
             transition: transform 250ms ease-in-out;
+            mix-blend-mode: difference;
         }
           
         .inner.hover {
             background: #C34444;
             mix-blend-mode: difference;
-        }
+        } */
+
+
+        .cursor {
+            pointer-events: none;
+            position: fixed;
+            display: block;
+            border-radius: 0;
+            mix-blend-mode: difference;
+            top: 0;
+            left: 0;
+            z-index: 9999999999999999;  
+          }
+          
+          .circle {
+              position: absolute;
+              display: block;
+              width: 26px;
+              height: 26px;
+              border-radius: 20px;
+              background-color: #C34444;
+          }
+          
         .bg-image {
             position: absolute;
             top: 0;
@@ -55,6 +79,7 @@
             background-position: center;
             /* opacity: 0.1; */
             z-index: 1;
+            pointer-events: none;
         }
         .noise-overlay {
             position: absolute;
@@ -64,13 +89,15 @@
             height: 100%;
             background-image: url('/Resource/BG\ Noise.jpg');
             opacity: 0.05;
-            z-index: 2;
+            z-index: 1;
+            pointer-events: none;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
+            z-index: 2;
         }
         .logo {
             font-weight: bold;
@@ -102,12 +129,28 @@
             width: 100%;
             height: 2px;
             background-color: #C34444;
+            
         }
         .cta-button {
             background-color: #C34444;
             color: white;
             padding: 8px 16px;
-            border-radius: 10px;
+            border-radius: 20px;
+            text-decoration: none;  
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Hover effect for the button */
+        .cta-button:hover {
+            background-color: #A32D2D; /* Darken the color */
+            transform: scale(1.05); /* Slight enlargement */
+            cursor: url('resource/custom_cursour.png'), auto; /* Custom cursor path */
+        }
+
+        /* Ensure the custom cursor is the right size */
+        .cta-button:hover {
+            cursor: url('Resource/custom_cursour.png')0 0, auto; /* Adjust cursor position offsets (20, 20) if needed */
+            cursor: pointer;
         }
         .hero {
             position: absolute;
@@ -126,8 +169,8 @@
             top: 14px;
         }
         .hero-circle {
-            width: 220px;
-            height: 220px;
+            width: 280px;
+            height: 280px;
             background-color: #C34444;
             border-radius: 50%;
             position: absolute;
@@ -141,11 +184,14 @@
             z-index: 2;
         }
         .small-text {
-            font-size: 21px;
+            font-size: 34px;
+            font-family: 'Inter';
         }
         .large-text {
-            font-size: 64px;
-            font-weight: 700;
+            font-size: 127px;
+            font-weight: 100;
+            line-height: 130px;
+            font-family: 'Moon Dance', cursive;
         }
         .scroll-hint {
             position: absolute;
@@ -155,9 +201,21 @@
             display: flex;
             align-items: center;
         }
+        
         .scroll-hint::after {
             content: "↓";
             margin-left: 5px;
             font-size: 20px;
+            animation: moveUpDown 1.5s ease-in-out infinite; /* Add the animation */
+        }
+        
+        /* Keyframes for the up and down motion */
+        @keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(0); /* Starting and ending point */
+            }
+            50% {
+                transform: translateY(10px); /* Move down by 10px */
+            }
         }
         
