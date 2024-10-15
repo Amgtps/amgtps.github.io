@@ -1840,7 +1840,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     text-align: center;
   }
 
-  .info-content .title { margin: auto; }
+  .info-content .title { margin: auto; padding: 10px 15px; }
 
   .info_more-btn { display: none; }
 
