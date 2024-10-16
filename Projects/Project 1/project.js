@@ -20,10 +20,10 @@ function animateCircles() {
 
   cursor.style.top = x;
   cursor.style.left = y;
-  
+
   circles.forEach(function (circle, index) {
     circle.style.left = x - 0 + "px";
-    circle.style.top = y -0  + "px";
+    circle.style.top = y - 0 + "px";
 
     circle.style.scale = (circles.length - index) / circles.length;
 
