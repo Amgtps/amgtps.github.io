@@ -39,3 +39,11 @@ function animateCircles() {
 }
 
 animateCircles();
+
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('animationend', () => {
+  carousel.style.animation = 'none';
+  carousel.offsetHeight; // Trigger reflow
+  carousel.style.animation = null;
+});
+

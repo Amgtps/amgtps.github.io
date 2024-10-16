@@ -1,9 +1,21 @@
 'use strict';
+document.querySelectorAll('.project-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    // Prevent default link behavior
+    e.preventDefault();
 
-window.onload = function() {
-  var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
-  shadowRoot.querySelector('#logo').remove();
-}
+    // Show loader
+    const loader = document.querySelector('.loader');
+    loader.style.display = 'flex'; // Make the loader visible
+
+    // Allow some time for the loader to show before redirect
+    setTimeout(() => {
+      // Redirect to the link's href
+      window.location.href = this.href;
+    }, 2000); // Adjust the timeout duration as needed (e.g., 1000 ms = 1 second)
+  });
+});
+
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -138,30 +150,77 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 
-
-// page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
+// Function to show the correct page based on the fragment
+function showPageFromHash() {
+  const hash = window.location.hash.substring(1); // Get the hash without the "#"
+  if (hash) {
     for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+      if (pages[i].id === hash) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
     }
+  } else {
+    // If there's no hash, show the first article by default
+    pages[0].classList.add("active");
+    navigationLinks[0].classList.add("active");
+  }
 
-  });
+  // Remove the logo after displaying the page
+  removeLogo();
 }
 
+// Function to remove the logo from the shadow DOM
+function removeLogo() {
+  const splineViewer = document.querySelector('spline-viewer');
+  if (splineViewer && splineViewer.shadowRoot) {
+    const logo = splineViewer.shadowRoot.querySelector('#logo');
+    if (logo) {
+      logo.remove();
+    }
+  }
+}
 
+// Initial check for the hash when the page loads
+window.onload = function () {
+  showPageFromHash();
+
+  // Create a MutationObserver to watch for changes in the shadow DOM
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      removeLogo(); // Remove the logo whenever a node is added
+    });
+  });
+
+  // Start observing the shadow root for child node changes
+  if (splineViewer && splineViewer.shadowRoot) {
+    observer.observe(splineViewer.shadowRoot, { childList: true, subtree: true });
+  }
+
+  // Optionally disconnect the observer after a certain time
+  setTimeout(() => observer.disconnect(), 5000); // Adjust the time as necessary
+};
+
+// Add event listeners to all navigation links
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+    const targetPage = this.innerHTML.toLowerCase(); // Get the target page name from the button
+    for (let j = 0; j < pages.length; j++) {
+      if (pages[j].dataset.page === targetPage) {
+        // Set the hash in the URL
+        window.location.hash = targetPage;
+        showPageFromHash(); // Update the displayed page
+        window.scrollTo(0, 0); // Scroll to the top
+      }
+    }
+  });
+}
 
 
 const coords = { x: 0, y: 0 };
