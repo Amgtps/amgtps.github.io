@@ -1,6 +1,9 @@
 'use strict';
 
-
+window.onload = function() {
+  var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+  shadowRoot.querySelector('#logo').remove();
+}
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
