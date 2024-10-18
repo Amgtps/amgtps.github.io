@@ -54,124 +54,246 @@
   <main>
 <div class="content">
 
-<div class="outer-container">
-  <div class="modal">
-<script>
-  function redirectToIndex() {
-    window.location.href = "../../../index.html#portfolio"; // Redirects to index.html
-  }
-</script>
+  <div class="outer-container">
+    <div class="modal">
 
-    <!-- <a herf="../../../index.html" class="close-btn">× close</a> -->
-     <button onclick="redirectToIndex()"class="close-btn">x close</button>
-    <div class="header">Family Trees of Ancient Mythology</div>
-    <div class="date">Oct 17 2024</div>
+      <script>
+        function redirectToIndex() {
+          window.location.href = "../../../index.html#portfolio"; // Redirects to index.html
+        }
+      </script>
 
-    <div class="carousel-container">
-      <div class="carousel">
-        <!-- Original set -->
-        <img src="IMG/image1.png" alt="CARA SOLE IMG 1" class="image-placeholder">
-        <img src="IMG/image2.png" alt="CARA SOLE IMG 2" class="image-placeholder">
-        <img src="IMG/image3.png" alt="CARA SOLE IMG 3" class="image-placeholder">
-        <!-- Duplicate set for smooth infinite scroll -->
-        <img src="IMG/image1.png" alt="CARA SOLE IMG 1" class="image-placeholder">
-        <img src="IMG/image2.png" alt="CARA SOLE IMG 2" class="image-placeholder">
-        <img src="IMG/image3.png" alt="CARA SOLE IMG 3" class="image-placeholder">
-        <!-- Another duplicate set -->
-        <img src="IMG/image1.png" alt="CARA SOLE IMG 1" class="image-placeholder">
-        <img src="IMG/image2.png" alt="CARA SOLE IMG 2" class="image-placeholder">
-        <img src="IMG/image3.png" alt="CARA SOLE IMG 3" class="image-placeholder">
+      <!-- Close button -->
+      <button onclick="redirectToIndex()" class="close-btn">× Close</button>
+
+      <!-- Header Section -->
+      <div class="header">Power BI Spotify Analytics Dashboard</div>
+      <div class="date">Oct 17, 2024</div>
+
+      <!-- Carousel Section -->
+      <div class="carousel-container">
+        <div class="carousel">
+          <!-- Original set -->
+          <img src="IMG/image1.png" alt="Carousel Image 1" class="image-placeholder">
+          <img src="IMG/image2.png" alt="Carousel Image 2" class="image-placeholder">
+          <img src="IMG/image3.png" alt="Carousel Image 3" class="image-placeholder">
+          <!-- Duplicate set for smooth infinite scroll -->
+          <img src="IMG/image1.png" alt="Carousel Image 1" class="image-placeholder">
+          <img src="IMG/image2.png" alt="Carousel Image 2" class="image-placeholder">
+          <img src="IMG/image3.png" alt="Carousel Image 3" class="image-placeholder">
+        </div>
       </div>
-    </div>
 
-    <div class="text-section">
-      <h3>Project Overview</h3>
-      <p>
-        "Family Trees of Ancient Mythology" is a data visualization project that explores the intricate relationships and
-        narratives within various mythological families from different cultures. This project utilizes Tableau to create
-        interactive visualizations that allow users to navigate through complex family trees, showcasing connections, lineage,
-        and the interplay of characters in ancient myths.
-      </p>
-      
-      <h3>Objectives</h3>
-      <ul>
-        <li>To visualize the family trees of prominent deities and mythical figures from various ancient cultures (e.g.,
-          Greek, Roman, Norse, Egyptian).</li>
-        <li>To provide an interactive experience that allows users to explore relationships and stories behind each character.
-        </li>
-        <li>To enhance understanding of cultural narratives and their significance in ancient societies.</li>
-      </ul>
-      
-      <h3>Tools and Technologies</h3>
-      <ul>
-        <li><strong>Tableau</strong>: Utilized for creating interactive dashboards and visualizations.</li>
-        <li><strong>Data Sources</strong>: Compiled data from mythological texts, scholarly articles, and reputable online
-          databases.</li>
-      </ul>
-    </div>
+      <!-- Project Overview Section -->
+      <div class="text-section">
+        <h3>Project Overview:</h3>
+        <p>This interactive <strong>Power BI dashboard</strong> provides in-depth insights into Spotify streaming
+          analytics and track performance from 2017 to 2023. It visualizes music streaming patterns, track performance,
+          and helps users understand listening behavior over time.</p>
 
-    <!-- Image left, text right -->
-    <div class="alternating-section">
-      <img src="IMG/imageleft.png" class="section-image" alt="Placeholder"> 
-      <div class="section-text">
-        <h3>Key Features</h3>
+        <h3>Why I Built This:</h3>
+        <p>In a data-driven world, businesses and individuals need to make sense of large volumes of data. With services
+          like Spotify, this dashboard uncovers valuable insights from listening patterns and track performance.</p>
         <ul>
-          <li><strong>Interactive Family Trees</strong>: Users can click on characters to reveal detailed information, including
-            their relationships and significant myths.</li>
-          <li><strong>Cultural Context</strong>: Each family tree is accompanied by context on the culture it represents,
-            enhancing the user’s understanding of the mythology.</li>
-          <li><strong>Responsive Design</strong>: Visualizations are designed to be accessible on various devices, ensuring a
-            broad audience can engage with the content.</li>
+          <li><strong>Help music industry professionals</strong> (artists, managers, record labels) better understand
+            audience preferences.</li>
+          <li><strong>Enable data enthusiasts</strong> to analyze trends in music consumption.</li>
+          <li><strong>Provide interactive and visually compelling insights</strong> for exploring streaming data
+            effectively.</li>
+        </ul>
+
+        <h3>What I Did:</h3>
+        <ul>
+          <li>Developed <strong>dynamic data visualizations</strong> to analyze music streaming trends and metrics.</li>
+          <li>Implemented an <strong>interactive filtering system</strong> for exploring specific time frames, artists,
+            or songs.</li>
+          <li>Integrated <strong>Spotify API data</strong> to fetch personal streaming history and track metadata.</li>
+          <li>Designed a user-friendly dashboard with <strong>custom visual elements</strong> like bar charts, heat
+            maps, timelines, and circular gauges.</li>
+        </ul>
+
+        <!-- Key Features -->
+        <h3>Key Features:</h3>
+        <h4>1. Streaming Analytics:</h4>
+        <ul>
+          <li>Visualize average streams per year (417.81M with 787% growth).</li>
+          <li>Historical streaming trends (2017-2023).</li>
+          <li>Monthly streaming patterns and growth rates.</li>
+        </ul>
+
+        <h4>2. Track Performance Analysis:</h4>
+        <ul>
+          <li>Track scoring based on:
+            <ul>
+              <li>Danceability, Liveness, Acousticness, Valence, Speechiness.</li>
+            </ul>
+          </li>
+          <li>Energy level measurement.</li>
+          <li>Top tracks by stream count.</li>
+        </ul>
+
+        <h4>3. Interactive Data Exploration:</h4>
+        <ul>
+          <li>Filters for refining data by year, artist, track, or custom date range.</li>
+          <li>Compare trends across different time frames or artists.</li>
+        </ul>
+
+        <h4>4. Data Visualizations:</h4>
+        <ul>
+          <li><strong>Bar charts</strong> for stream comparisons.</li>
+          <li><strong>Heat maps</strong> to display monthly and yearly streaming patterns.</li>
+          <li><strong>Timelines</strong> for track release dates and streaming trends.</li>
+          <li><strong>Circular gauges</strong> for energy level visualization.</li>
+          <li><strong>Performance matrices</strong> for side-by-side track attribute analysis.</li>
         </ul>
       </div>
-    </div>
 
-    <!-- Image right, text left -->
-    <div class="alternating-section reverse">
-      <img src="IMG/imageright.png" class="section-image" alt="Placeholder">
-      <div class="section-text">
-        <h3>Challenges Faced</h3>
-        <ul>
-          <li><strong>Data Collection</strong>: Gathering accurate and comprehensive data from diverse sources was
-            time-consuming and required careful validation.</li>
-          <li><strong>Complexity of Relationships</strong>: Representing the multifaceted relationships in mythology posed
-            challenges in design and clarity.</li>
-        </ul>
+      <!-- Alternating Sections -->
+      <!-- Image left, text right -->
+      <div class="alternating-section">
+        <img src="IMG/imageleft.png" class="section-image" alt="Visualization Image">
+        <div class="section-text">
+          <h3>How It Benefits Clients:</h3>
+          <ul>
+            <li><strong>Music industry professionals</strong> can identify high-performing tracks and make informed
+              marketing and promotional decisions.</li>
+            <li><strong>Artists</strong> can analyze which songs resonate with their audience to guide future music
+              production.</li>
+            <li><strong>Data analysts</strong> can uncover trends in music consumption, predicting future behaviors or
+              rising genres.</li>
+          </ul>
+        </div>
       </div>
+
+      <!-- Image right, text left -->
+      <div class="alternating-section reverse">
+        <img src="IMG/imageright.png" class="section-image" alt="Tech Stack Image">
+        <div class="section-text">
+          <h3>Technologies Used:</h3>
+          <ul>
+            <li><strong>Microsoft Power BI</strong> for creating the dashboard and visualizations.</li>
+            <li><strong>DAX (Data Analysis Expressions)</strong> for complex calculations.</li>
+            <li><strong>Power Query Editor</strong> for data transformation.</li>
+            <li><strong>Spotify API</strong> for fetching streaming data and track metadata.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Usage Instructions -->
+      <div class="text-section">
+        <h3>How To Use This Dashboard:</h3>
+        <ol>
+          <li>Clone the repository:
+            <pre><code>git clone https://github.com/Amgtps/PowerBI-spotify.git
+cd PowerBI-spotify</code></pre>
+          </li>
+          <li>Open the <code>.pbix</code> file in <strong>Power BI Desktop</strong>.</li>
+          <li>Connect your Spotify account to load personal data or explore using the provided sample data.</li>
+          <li>Refresh the data to start analyzing your Spotify streaming metrics.</li>
+        </ol>
+
+        <p><strong>Project Link:</strong> <a href="https://github.com/Amgtps/PowerBI-spotify"
+            target="_blank">PowerBI-spotify</a></p>
+
+        <h3>Why Choose This Dashboard:</h3>
+        <p>This dashboard empowers users to explore data in a visually intuitive way, uncovering hidden insights in
+          their Spotify streaming data. It is designed for ease of use and scalability, ideal for both individual users
+          and organizations seeking to understand streaming trends.</p>
+      </div>
+
+      <!-- Share Button -->
+    <div class="button-parent">
+      <button>
+        Share It 
+        <div class="star-1">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path class="fil0"
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-2">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path class="fil0"
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-3">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path class="fil0"
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-4">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path class="fil0"
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-5">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path class="fil0"
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-6">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path class="fil0"
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </button></div>
+
+
     </div>
-
-    <div class="text-section"> 
-      <h3>Outcome</h3>
-      <p>
-        The project successfully highlights the interconnectedness of mythological figures and provides a unique educational
-        tool for those interested in mythology. Feedback from users indicated that the interactive nature of the
-        visualizations greatly enhanced their engagement and understanding.
-      </p>
-
-      <h3>Future Enhancements</h3>
-      <ul>
-        <li>Expanding the database to include lesser-known mythologies.</li>
-        <li>Incorporating user-generated content where users can submit their interpretations of myths.</li>
-        <li>Adding features for comparative analysis between different mythologies.</li>
-      </ul>
-      
-    </div>
-
-    <button class="share-btn">SHARE</button>
   </div>
-</div>
 
 </div>
+
 
   </main>
-
-
-
-  
-  <script src="project.js"></script>
-
-
-  
+    <script src="project.js"></script>
 </body>
 
 </html>
